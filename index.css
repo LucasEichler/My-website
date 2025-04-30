@@ -1,0 +1,218 @@
+/* Resetando margens e padding para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do body */
+body {
+    font-size: 100%;
+    background-image: url("icons/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+/* Links sem sublinhado */
+a {
+    text-decoration: none;
+}
+
+/* Remover marcador de lista */
+ul {
+    list-style: none;
+}
+
+/* Container principal da nav */
+nav {
+    max-width: 1120px;
+    margin: auto;
+    padding: 1.5rem 0.30rem; /* Ajustado para menos padding */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; /* Garantir que os itens fiquem sempre em linha (row) */
+    flex-wrap: nowrap; /* Removido o flex-wrap para evitar quebra */
+}
+
+/* LinkedIn à esquerda */
+.btn-linkedin {
+    display: flex;
+    align-items: center;
+}
+
+.btn-linkedin img {
+    width: 35px;
+    height: 35px;
+}
+
+/* Menu central */
+.nav-center {
+    display: flex;
+    gap: 6rem;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+    justify-content: center; /* Garante que o menu fique centralizado */
+}
+
+/* Links do menu */
+.nav-center li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 525;
+    transition: color 0.3s;
+}
+
+.nav-center li a:hover {
+    color: #ffffff;
+}
+
+/* GitHub à direita */
+.btn-github {
+    background-color: #fffafa;
+    color: rgb(0, 0, 0);
+    padding: 8px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-github:hover {
+    background-color: #ffffffa4;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem; /* Menos padding nas telas menores */
+    }
+
+    .nav-center {
+        gap: 1rem;
+        justify-content: flex-start; /* Ajusta o alinhamento do menu */
+    }
+
+    .btn-linkedin,
+    .btn-github {
+        margin-bottom: 1rem; /* Dá um espaçamento entre os itens */
+    }
+}
+
+
+
+
+
+
+
+figure img[src="icons/computer.png"] {
+    display: block;
+    margin: 0 auto;
+    max-width: 72%;
+    padding-top: 10%;
+}
+
+.hero-imagens-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end; /* Imagem à direita, texto à esquerda */
+    gap: 2rem; /* Espaço entre imagem e texto */
+    padding: 5% 10%;
+}
+
+.hero-imagens-container figure img[src="icons/dev-photo.png"] {
+    max-width: 20vw; /* Usa viewport para tornar proporcional ao tamanho da tela */
+    height: auto;
+}
+
+.hero-texto {
+    max-width: 50%; /* Para quebrar o texto e limitar a largura */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.hero-texto h1 {
+    font-size: 2.5vw; /* Tamanho responsivo e proporcional à imagem */
+    margin-bottom: 1rem;
+    line-height: 1;
+    max-width: 40ch;
+    color: #fffafa;
+}
+
+.hero-texto h2 {
+    font-size: 1vw; /* Menor que o h1, proporcional */
+    line-height: 1;
+    font-weight: normal;
+    max-width: 40ch; /* Mesma largura do h1 */
+    word-wrap: break-word; /* Garante quebra se alguma palavra for muito longa */
+    color: #b8b6b6;
+}
+   
+
+
+
+
+
+/* Container do Slider */
+.slider-container {
+    width: 80vw;
+    max-width: 1200px; /* Ajuste conforme sua necessidade */
+    margin-left: 5vw;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+/* Slider (contém todos os slides) */
+.slider {
+    display: none; /* Todos os slides inicialmente escondidos */
+    width: 100%;
+    height: 400px; /* Ajuste conforme necessário */
+    text-align: left;
+}
+
+/* Exibe o slide ativo */
+input[type="radio"]:checked + .slider {
+    display: block;
+}
+
+/* Estilo dos botões de navegação (manual) */
+.radio-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-50%);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .slider {
+    display: block;
+}
+
+/* Navegação automática */
+.navigation {
+    display: none;
+}
+
+
+
+/* Img Featured project */
+figure img[src="icons/projects.png"][alt=""] { 
+    width: 100%;           /* Ajusta ao container */
+    max-width: 1864px;      /* Limita tamanho máximo */
+    height: auto;          /* Mantém proporção */
+    display: block;        /* Remove espaço embaixo */
+    margin: 0 auto;        /* Centraliza horizontalmente */
+    padding: 1rem;         /* Espaçamento interno opcional */
+    margin-top: 5%;
+}
